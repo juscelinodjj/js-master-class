@@ -1,0 +1,61 @@
+# Evolução das versões
+
+- Com a padronização, foi formado um comitê chamado TC39 que passou a trabalhar na especificação ECMA-262.
+- ES1 | 1997 | 110 páginas.
+  - Oficialização do que já havia sido feito até o momento da padronização ECMA.
+- ES2 | 1998 | 117 páginas.
+  - Adequação com a normativa ISO/IEC 16262
+- ES3 | 1999 | 188 páginas.
+  - Exception Handling (throw/try/catch)
+  - Regular Expression
+  - switch
+  - do-while
+  - ...
+- Por volta de 2005, com o surgimento do AJAX, a linguagem ganhou vida nova.
+- Esse período também foi conhecido como a era das trevas e do ódio.
+- Além da linguagem deixar a desejar, pouca gente sabia utilizá-la corretamente.
+- ES5 | 2009 | 252 páginas.
+  - JSON
+  - stric mode
+  - Reserved words as property keys
+  - multiline string
+  - Object API
+  - Array.prototype.*
+- Passaram-se cerca de 10 anos sem o lançamento de novas versões.
+- Por que tanto tempo se passou?
+- Houve uma separação dos grupos que especificavam as versões 3.1 e 4.0.
+- Microsoft e Yahoo estavam na 3.1 e Adobe, Mozilla, Opera e Google na 4.0.
+- Após mais de um ano de trabalho em paralelo as versões não eram compatíveis.
+- Após muita discussão, o TC39 decidiu rejeitar ambas as versões 3.1 e 4.0.
+- ES5.1 | 2011 | 258 páginas.
+  - Adequação com a normativa ISO/IEC 16262
+- Enfim, chegou o sucesso e a popularidade.
+- ES6 | 2015 | 566 páginas.
+  - Class
+  - Arrow function
+  - Proxy
+  - Reflect
+  - Map
+  - Set
+  - Destructuring
+  - Rest parameter
+  - Default value
+  - Template literal
+  - Spread operator
+  - Generators
+  - Promises
+  - Modules
+- ES7 | 2016 | 586 páginas.
+  - Array.protype.includes
+  - Exponentiation operator
+  - ...
+- ES8 | 2017 | 885 páginas.
+  - Async/Await
+  - Object.values
+  - Object.entries
+  - String.protype.padStart
+  - String.protype.padEnd
+  - Trailling commas in parameters list
+  - object and array ...
+- Como o ES6 ficou grande demais, a partir do ES7, as versões passaram a ser anuais.
+- Cuidado com os problemas de compatibilidade ao utilizar novas funcionabilidades.
