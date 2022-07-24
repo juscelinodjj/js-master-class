@@ -16,4 +16,4 @@
 - Ao utilizar **const**, a variável é declarada no escopo da função mas só é inicializada posteriormente, respeitando bloco e não permitindo reatribuição nem redeclaração.
 - Ao declarar uma variável sem **var**, **let** ou **const** ela é criada no escopo global.
 - Nunca declare variáveis sem **var**, **let** ou **const** e evite a utilização de **var**.
-- Um identificador válido deve começar com [a-zA-Z_$] seguido por [a-zA-Z0-9_$].
+- Um identificador válido deve começar com `[a-zA-Z_$]` seguido por `[a-zA-Z0-9_$]`.
