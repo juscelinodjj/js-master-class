@@ -1,0 +1,26 @@
+# Operadores numéricos
+
+- Operadores aritméticos
+  - **\+**
+  - **\-**
+  - **\***
+  - **/**
+  - **%**
+- Operadores de atribuição
+  - **+=**
+  - **-=**
+  - ***=**
+  - **/=**
+  - **%=**
+- Operadores de incremento e decremento
+  - **++**
+  - **--**
+- Operadores binários
+  - **|**
+  - **&**
+  - **^**
+  - **~**
+  - **>>**
+  - **<<**
+  - **>>>**
+- Cuidado para não confundir os operadores **|** e **&** com **||** e **&&**.
