@@ -5,5 +5,6 @@
 - [Evolução das versões](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/evolução-das-versões.md)
 - [Variáveis](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/variáveis.md)
 - [Tipos de dados](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/tipos-de-dados.md)
+- [Number](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/number.md)
 - [Operadores numéricos](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/operadores-numéricos.md)
 - [Conversão numérica](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/conversão-numérica.md)
