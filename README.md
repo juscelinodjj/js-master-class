@@ -9,3 +9,4 @@
 - [Operadores numéricos](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/operadores-numéricos.md)
 - [Conversão numérica](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/conversão-numérica.md)
 - [IEEE 754](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/ieee-754.md)
+- [Math API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/math-api.md)
