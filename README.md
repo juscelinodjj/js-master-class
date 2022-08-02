@@ -11,3 +11,4 @@
 - [IEEE 754](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/ieee-754.md)
 - [Math API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/math-api.md)
 - [String](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/string.md)
+- [Template Literals](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/template-literals.md)
