@@ -12,3 +12,4 @@
 - [Math API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/math-api.md)
 - [String](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/string.md)
 - [Template Literals](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/template-literals.md)
+- [String API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/string-api.md)

@@ -1,0 +1,52 @@
+# String API
+
+- **length**
+  - Retorna o tamanho da string.
+- **indexOf**
+  - Retorna a primeira posição encontrada do caractere passado por parâmetro.
+- **lastIndexOf**
+  - Retorna a última posição encontrada do caractere passado por parâmetro.
+- **toUpperCase**
+  - Retorna uma nova string convertendo as letras para maiúsculas.
+- **toLowerCase**
+  - Retorna uma nova string convertendo as letras para minúsculas.
+- **charAt**
+  - Retorna o caractere na posição passada por parâmetro.
+- **charCodeAt**
+  - Retorna o código com base na posição passada por parâmetro.
+- **fromCharCode**
+  - Retorna um caractere com base no código passado por parâmetro.
+- **includes**
+  - Retorna verdadeiro se a string contém a string passa por parâmetro.
+- **startsWith**
+  - Retorna verdadeiro se a string inicia com a string passada por parâmetro.
+- **endsWith**
+  - Retorna verdadeiro se a string termina com a string passada por parâmetro.
+- **localeCompare**
+  - Retorna -1 se a string passada por parâmtro for maior, 0 se for igual e 1 se for menor.
+- **match**
+  - Retorna partes da string com base na RegExp passada por parâmtro.
+- **search**
+  - Retorna a primeira posição encontrada com base na RegExp passada por parâmetro.
+- **replace**
+  - Retorna uma nova string resultante da substituição da string ou RegExp passada no primeiro parâmetro pelo segundo parâmetro.
+- **slice**
+  - Retorna uma parte da string que está invocando a função iniciando na posição passada no primeiro parâmetro até a posição final passada no segundo parâmetro, ou da posição passada no primeiro parâmetro até o fim caso o segundo parâmetro não seja informado.
+- **split**
+  - Retorna um array contendo o resultado da divisão da string original de acordo com o critério passado por parâmetro.
+- **substring**
+  - Similar ao slice, não aceita valores negativos como parâmetro e permite a inversão dos parâmetros.
+- **concat**
+  - Retorna uma nova string resultante da concatenação da que está invocando a função e da outra, passada por parâmetro.
+- **padStart**
+  - Completa a string com caracteres no início.
+- **padEnd**
+  - Completa a string com caracteres no fim.
+- **repeat**
+  - Repete um caractere.
+- **trim**
+  - Elimina espaços em branco no início e no fim.
+- **trimLeft**
+  - Elimina espaços em branco no início.
+- **trimRight**
+  - Elimina espaços em branco no fim.
