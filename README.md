@@ -16,3 +16,4 @@
 - [Boolean](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/boolean.md)
 - [Operadores booleanos](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/operadores-booleanos.md)
 - [Symbol](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/symbol.md)
+- [RegExp](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/regexp.md)
