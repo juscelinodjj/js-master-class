@@ -18,3 +18,4 @@
 - [Symbol](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/symbol.md)
 - [RegExp](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/regexp.md)
 - [Exercício 1](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-1.js)
+- [Object](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/object.md)
