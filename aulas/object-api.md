@@ -1,0 +1,23 @@
+# Object API
+
+- O método **Object.assign** faz a cópia das propriedades dos objetos passado por parâmetro para o objeto, que é retornado.
+- O método **Object.keys** retorna as chaves das propriedades do objeto.
+- O método **Object.values** retorna os valores das propriedades do objeto.
+- O método **Object.entries** retorna as propriedades do objetos em pares de chave e valor.
+- O método **Object.is** compara dois objetos, considerando os tipos de dados, de forma similar ao operador ===.
+- **defineProperty**
+  - **configurable**
+    - Permite que uma determinada propriedade seja apagada.
+  - **enumerable**
+    - Permite que uma determinada propriedade seja enumerada.
+  - **value**
+    - Define o valor de uma determinada propriedade.
+  - **writable**
+    - Permite que uma determinada propriedade tenha seu valor modificado.
+- **preventExtensions**
+  - Impede que o objeto tenha novas propriedades, mas permite modificar ou remover as propriedades existentes.
+- **seal**
+  - Impede que o objeto tenha novas propriedades ou apague propriedades existentes, mas permite modificar propriedades existentes.
+- **freeze**
+  - Impede que o objeto tenha novas propriedades, apague ou modifique propriedades existentes.
+- **Não é possível alterar o protótipo do objeto que se torne imútavel.**

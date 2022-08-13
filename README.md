@@ -22,3 +22,4 @@
 - [Undefined e Null](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/undefined-e-null.md)
 - [Comparação de objetos](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/comparação-de-objetos.md)
 - [Herança](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/herança.md)
+- [Object API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/object-api.md)
