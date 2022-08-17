@@ -26,3 +26,4 @@
 - [JSON](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/json.md)
 - [Exercício 2](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-2.js)
 - [Function](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/function.md)
+- [This](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/this.md)
