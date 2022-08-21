@@ -30,3 +30,4 @@
 - [Getter e Setter](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/getter-e-setter.md)
 - [Call, Apply e Bind](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/call-apply-e-bind.md)
 - [New](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/new.md)
+- [Instanceof](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/instanceof.md)
