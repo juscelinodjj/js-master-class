@@ -34,3 +34,4 @@
 - [Exercício 3](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-3.js)
 - [Arrow Function](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/arrow-function.md)
 - [Execution Context](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/execution-context.md)
+- [Closures](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/closures.md)
