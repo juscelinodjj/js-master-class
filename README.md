@@ -38,3 +38,4 @@
 - [Tratamento de exceções](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/tratamento-de-exceções.md)
 - [Exercício 4](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-4.js)
 - [Destructuring](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/destructuring.md)
+- [Array](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/array.md)
