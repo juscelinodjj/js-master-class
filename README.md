@@ -39,3 +39,4 @@
 - [Exercício 4](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-4.js)
 - [Destructuring](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/destructuring.md)
 - [Array](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/array.md)
+- [Array Mutator API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/array-mutator-api.md)
