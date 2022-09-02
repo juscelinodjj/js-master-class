@@ -42,3 +42,4 @@
 - [Array Mutator API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/array-mutator-api.md)
 - [Array Iteration API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/array-iteration-api.md)
 - [Array Accessor API](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/array-accessor-api.md)
+- [Exercício 5](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-5.js)
