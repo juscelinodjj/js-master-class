@@ -32,68 +32,71 @@ Database.prototype.chooseMethod = function (input) {
   return this.accessList[key] || null;
 }
 
-Database.prototype.parse = function () {
-  function table (input) {
-    const patternTableName = /table\s(.+)\s\(/;
-    const patternColumnsContent = /\((.+)\)/;
-    const tableName = input.match(patternTableName)[1];
-    const columnsContent = input.match(patternColumnsContent)[1];
-    const columns = columnsContent.split(', ');
-    return {tableName, columns};
-  }
-  function insert (input) {
-    const patternTableName = /^insert\sinto\s(.*?)\s\(/;
-    const patternGroup = /\((.*?)\)/g;
-    const tableName = input.match(patternTableName)[1];
-    const group = [...input.matchAll(patternGroup)].map(match => match[1]);
-    const columns = group[0].split(', ');
-    const values = group[1].split(', ');
-    const row = columns.reduce((accumulator, element, index) => {
-      return {...accumulator, [element]: values[index]};
-    }, {});
-    return {tableName, row};
-  }
-  function select (input) {
-    const patternColumns = /^select\s(.+)\sfrom/;
-    const patternTableName = /from\s(\w+)/;
-    const patternId = /where\sid\s=\s(\d)/;
-    const rawColumns = input.match(patternColumns)[1];
-    const columns = rawColumns.split(', ');
-    const tableName = input.match(patternTableName)[1];
-    const id = patternId.test(input) ? input.match(patternId)[1] : null;
-    return {columns, tableName, id};
-  }
-  function _delete (input) {
-    const patternTableName = /from\s(\w+)/;
-    const patternId = /where\sid\s=\s(\d)/;
-    const tableName = input.match(patternTableName)[1];
-    const id = patternId.test(input) ? input.match(patternId)[1] : null;
-    return {tableName, id};
-  }
-  return {table, insert, select, _delete};
+Database.prototype.parse = function (input) {
+  const patternTableName = /(table|into|from)\s(\w+)\s*/;
+  const patternCreate = /create.+\((.+?)\)/;
+  const patternInsert = /insert.+\((.*?)\).+\((.*?)\)/;
+  const patternSelect = /select\s(.+)\sfrom(?:.+id\s=\s(\d+))?/;
+  const patternDelete = /delete\sfrom\s\w+(?:\swhere\sid\s=\s(\d+))?/;
+  // ALL -----------------------------------------------------------------------
+  const tableName = input.match(patternTableName)[2];
+  // CREATE --------------------------------------------------------------------
+  const matchCreate = patternCreate.test(input)
+    ? input.match(patternCreate)[1] : null;
+  const columnsWithType = matchCreate
+    ? matchCreate.split(', ').map(column => column.split(' ')) : null;
+  // INSERT --------------------------------------------------------------------
+  const matchInsert = patternInsert.test(input)
+    ? input.match(patternInsert) : null;
+  const columnsInsert = matchInsert ? matchInsert[1].split(', ') : null;
+  const valuesInsert = matchInsert ? matchInsert[2].split(', ') : null;
+  const rowInsert = columnsInsert
+    ? columnsInsert.reduce((accumulator, element, index) => {
+        return {...accumulator, [element]: valuesInsert[index]};
+      }, {})
+    : null;
+  // SELECT --------------------------------------------------------------------
+  const matchSelect = patternSelect.test(input)
+    ? input.match(patternSelect) : null;
+  const columnsSelect = matchSelect ? matchSelect[1].split(', ') : null;
+  const idSelect = matchSelect && matchSelect[2] ? matchSelect[2] : null;
+  // DELETE --------------------------------------------------------------------
+  const matchDelete = patternDelete.test(input)
+    ? input.match(patternDelete) : null;
+  const idDelete = matchDelete && matchDelete[1] ? matchDelete[1] : null;
+  const deleteAll = matchDelete && !matchDelete[1] ? true : false;
+  //----------------------------------------------------------------------------
+  return {
+    tableName,
+    columnsWithType,
+    rowInsert,
+    columnsSelect,
+    idSelect,
+    idDelete,
+    deleteAll
+  };
 }
 
 Database.prototype.createTable = function (input) {
-  const {tableName, columns} = this.parse().table(input);
+  const {tableName, columnsWithType} = this.parse(input);
   this.tables[tableName] = {columns: {}, data: []};
-  for (const column of columns) {
-    const key = column.split(' ')[0];
-    const value = column.split(' ')[1];
-    this.tables[tableName].columns[key] = value;
+  for (const columns of columnsWithType) {
+    const [name, value] = columns;
+    this.tables[tableName].columns[name] = value;
   }
 }
 
 Database.prototype.insert = function (input) {
-  const {tableName, row} = this.parse().insert(input);
-  this.tables[tableName].data.push(row);
+  const {tableName, rowInsert} = this.parse(input);
+  this.tables[tableName].data.push(rowInsert);
 }
 
 Database.prototype.select = function (input) {
-  const {columns, tableName, id} = this.parse().select(input);
+  const {tableName, columnsSelect, idSelect} = this.parse(input);
   const data = this.tables[tableName].data;
-  const rows = id ? data.filter(object => object.id === id) : data;
+  const rows = idSelect ? data.filter(object => object.id === idSelect) : data;
   const parsedRows = rows.map(object => {
-    return columns.reduce((accumulator, column) => {
+    return columnsSelect.reduce((accumulator, column) => {
       return {...accumulator, [column]: object[column]};
     }, {});
   });
@@ -101,9 +104,13 @@ Database.prototype.select = function (input) {
 }
 
 Database.prototype.delete = function (input) {
-  const {tableName, id} = this.parse()._delete(input);
+  const {tableName, idDelete, deleteAll} = this.parse(input);
+  if (deleteAll) {
+    this.tables[tableName].data = [];
+    return;
+  }
   const data = this.tables[tableName].data;
-  const filtedData = data.filter(object => object.id !== id);
+  const filtedData = data.filter(object => object.id !== idDelete);
   this.tables[tableName].data = filtedData;
 }
 
