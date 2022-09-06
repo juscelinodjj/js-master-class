@@ -45,3 +45,4 @@
 - [Exercício 5](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-5.js)
 - [Exercício 6](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-6.js)
 - [Exercício 7](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-7.js)
+- [Map](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/map.md)
