@@ -46,3 +46,4 @@
 - [Exercício 6](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-6.js)
 - [Exercício 7](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-7.js)
 - [Map](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/map.md)
+- [WeakMap](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/weak-map.md)
