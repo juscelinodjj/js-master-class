@@ -1,6 +1,6 @@
 # WeakMap
 
-- WeakMap é um objeto, similar ao Map, que permite **apenas chaves do tipo Object** e **mantém as referências de forma fraca**, sendo volátil e não iteravel.
+- WeakMap é um objeto, similar ao Map, que permite **apenas chaves do tipo Object** e **mantém as referências de forma fraca**, sendo volátil e não iterável.
 - **set**
   - Adiciona um par de chave e valor.
 - **has**
