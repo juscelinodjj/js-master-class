@@ -48,3 +48,4 @@
 - [Map](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/map.md)
 - [WeakMap](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/weak-map.md)
 - [Set](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/set.md)
+- [WeakSet](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/weak-set.md)
