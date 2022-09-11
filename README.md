@@ -50,3 +50,4 @@
 - [Set](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/set.md)
 - [WeakSet](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/weakset.md)
 - [Iterables e Iterators](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/iterables-e-iterators.md)
+- [Classes](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/classes.md)
