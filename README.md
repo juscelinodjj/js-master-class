@@ -51,3 +51,4 @@
 - [WeakSet](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/weakset.md)
 - [Iterables e Iterators](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/iterables-e-iterators.md)
 - [Classes](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/classes.md)
+- [Exercício 8/9](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-8-9.js)
