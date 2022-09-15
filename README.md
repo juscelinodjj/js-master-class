@@ -54,3 +54,4 @@
 - [Exercício 8/9](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-8-9.js)
 - [Proxy e Reflect](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/proxy-e-reflect.md)
 - [Modules](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/modules.md)
+- [Exercício 10](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-10/main.mjs)
