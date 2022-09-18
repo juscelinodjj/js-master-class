@@ -57,3 +57,4 @@
 - [Exercício 10](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-10/main.mjs)
 - [Promise](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/promise.md)
 - [Exercício 11](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-11/main.mjs)
+- [Generators](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/generators.md)
