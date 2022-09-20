@@ -15,16 +15,18 @@ function main() {
   const inputE = 'delete from author where id = 2';
   const inputF = 'select name, age from author';
   database.execute(inputA)
-    .then(() => {
+    .then(status => {
+      console.log('create status:', status);
       Promise.all([
         database.execute(inputB),
         database.execute(inputC),
         database.execute(inputD),
         database.execute(inputE)
-      ]).then(() => {
-        database.execute(inputF);
+      ]).then(status => {
+        console.log('Promise All Status:', status);
+        database.execute(inputF).then(select => console.log('select:', select));
         console.log(JSON.stringify(database, null, 2));
-      })
+      }).catch(error => console.log(error.message));
     })
     .catch(error => console.log(error));
 }

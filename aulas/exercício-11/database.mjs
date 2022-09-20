@@ -4,52 +4,34 @@ import DatabaseError from './database-error.mjs';
 import Parse from './parse.mjs';
 
 export default class Database {
-  #accessList;
-  #validInputs;
-
   constructor() {
-    const accessList = {
-      'create table': 'createTable',
-      'insert into': 'insert',
-      'select ': 'select',
-      'delete from ': 'delete'
-    };
-    this.#accessList = accessList;
-    this.#validInputs = this.getValidInputs();
     this.tables = {};
     Object.freeze(this);
   }
-
-  getValidInputs() {
-    return Object.keys(this.#accessList);
+  #test(input) {
+    const regex = /^(create\stable|insert\sinto|select|delete\sfrom)\s/;
+    return regex.test(input);
   }
-
-  isValidInput(input) {
-    return this.#validInputs.some(validInput => input.startsWith(validInput));
+  #command(input) {
+    const regex = /^([a-z]+)\s/;
+    const command = regex.test(input) ? input.match(regex)[1] : null;
+    return command;
   }
-
-  chooseMethod(input) {
-    const key = this.#validInputs.find(validInput => {
-      return input.startsWith(validInput);
-    });
-    return this.#accessList[key] || null;
-  }
-
-  createTable(input) {
+  #create(input) {
     const {tableName, create: {columnsWithType}} = new Parse(input);
     this.tables[tableName] = { columns: {}, data: [] };
     for (const columns of columnsWithType) {
       const [name, value] = columns;
       this.tables[tableName].columns[name] = value;
     }
+    return true;
   }
-
-  insert(input) {
+  #insert(input) {
     const {tableName, insert: {row}} = new Parse(input);
     this.tables[tableName].data.push(row);
+    return true;
   }
-
-  select(input) {
+  #select(input) {
     const {tableName, select: {columns, id}} = new Parse(input);
     const data = this.tables[tableName].data;
     const rows = id ? data.filter(object => object.id === id) : data;
@@ -58,30 +40,37 @@ export default class Database {
         return { ...accumulator, [column]: object[column] };
       }, {});
     });
-    console.log(JSON.stringify(parsedRows, null, 2));
+    return parsedRows;
   }
-
-  delete(input) {
+  #delete(input) {
     const {tableName, delete: {id, all}} = new Parse(input);
     if (all) {
       this.tables[tableName].data = [];
-      return;
+      return true;
     }
     const data = this.tables[tableName].data;
     const filtedData = data.filter(object => object.id !== id);
     this.tables[tableName].data = filtedData;
+    return true;
   }
-
+  #execute(input) {
+    const commands = {
+      create: this.#create,
+      insert: this.#insert,
+      select: this.#select,
+      delete: this.#delete,
+    };
+    const command = this.#command(input);
+    return commands[command].call(this, input);
+  }
   execute(input) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (!this.isValidInput(input)) {
-          const message = `Syntax error: "${input}"`;
-          const error = new DatabaseError(input, message);
+        if (!this.#test(input)) {
+          const error = new DatabaseError(input, `Syntax error: "${input}"`);
           return reject(error);
         }
-        const method = this.chooseMethod(input);
-        resolve(this[method](input));
+        resolve(this.#execute(input));
       }, 1000);
     });
   }
