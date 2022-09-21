@@ -58,3 +58,4 @@
 - [Promise](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/promise.md)
 - [Exercício 11](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-11/main.mjs)
 - [Generators](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/generators.md)
+- [Async/Await](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/async-await.md)
