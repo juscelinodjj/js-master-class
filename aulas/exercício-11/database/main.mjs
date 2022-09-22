@@ -1,6 +1,6 @@
 'use strict';
 
-import DatabaseError from './database-error.mjs';
+import DatabaseError from './error.mjs';
 import Parse from './parse.mjs';
 
 export default class Database {

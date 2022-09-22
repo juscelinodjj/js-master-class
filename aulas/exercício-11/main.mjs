@@ -1,6 +1,6 @@
 'use strict';
 
-import Database from './database.mjs';
+import Database from './database/main.mjs';
 
 function main() {
   const database = new Database;
