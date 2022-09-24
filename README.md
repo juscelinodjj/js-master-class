@@ -1,4 +1,5 @@
 # JavaScript Master Class
+#### Anotações e exercícios do treinamento [JavaScript Masterclass](https://app.branas.io/javascriptmasterclass), ministrado por [Rodrigo Branas](https://github.com/rodrigobranas).
 
 - [Abertura](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/abertura.md)
 - [História da linguagem](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/história-da-linguagem.md)
@@ -59,4 +60,4 @@
 - [Exercício 11](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-11/main.mjs)
 - [Generators](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/generators.md)
 - [Async/Await](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/async-await.md)
-- [Exercício 12](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-12/main.mjs)
+- [Exercício 12 **(final)**](https://github.com/juscelinodjj/js-master-class/blob/main/aulas/exercício-12/main.mjs)
